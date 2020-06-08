@@ -1,14 +1,14 @@
 const http = require('http');
 
-const server = http.createServer((req, resp) => {
+const server = http.createServer((req, res) => {
   console.log(req);
   // process.exit();
-  resp.setHeader('Content-Type', 'text/html');
-  resp.write('<html>');
-  resp.write('<head><title>Node</title></head>')
-  resp.write('<body>a response?! *gasp*</body>')
-  resp.write('</html>');
-  resp.end();
+  res.setHeader('Content-Type', 'text/html');
+  res.write('<html>');
+  res.write('<head><title>Node</title></head>')
+  res.write('<body>a response?! *gasp*</body>')
+  res.write('</html>');
+  res.end();
 });
 
 server.listen(3000);
