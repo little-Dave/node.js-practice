@@ -1,5 +1,7 @@
-const fs = require('fs');
+const http = require('http');
 
-fs.writeFileSync('hello.txt', '#noooooode');
+const server = http.createServer((req, resp) => {
+  console.log(req);
+});
 
-// ^ will create a file, 'hello.txt' that contains the text: #noooooooode
+server.listen(3000);
